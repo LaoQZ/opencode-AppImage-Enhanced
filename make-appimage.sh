@@ -13,7 +13,11 @@ export DESKTOP=/usr/share/applications/OpenCode.desktop
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/opencode* /usr/lib/libnss_nis.so*
+quick-sharun \
+	/usr/bin/opencode*      \
+	/usr/lib/libnss_nis.so* \
+	/usr/lib/libnsl.so*     \
+	/usr/lib/libnss_mdns*_minimal.so*
 
 # bun makes binaries that self extract and read /proc/self/exe
 # they are also very delicate and get broken by strip
