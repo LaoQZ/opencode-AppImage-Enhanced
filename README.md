@@ -18,20 +18,9 @@
 
 Improved AppImage of opencode **independent of the host libc** which makes able to work on very very old distros as well as musl-libc distros like alpine linux.
 
-* `opencode-cli` is also included, to use it you can do the following: 
-
-```
-# change argv0 to opencode-cli (similar to how busybox works)
-ln -s ./OpenCode-*.AppImage ./opencode-cli
-./opencode-cli
-
-# or pass opencode-cli as $1
-./OpenCode-*.AppImage opencode-cli
-```
-
 ---
 
-AppImage made using [sharun](https://github.com/VHSgunzo/sharun) and its wrapper [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks. 
+AppImage made using [sharun](https://github.com/VHSgunzo/sharun) and its wrapper [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks.
 
 **This AppImage bundles everything and it should work on any Linux distro, including old and musl-based ones.**
 
