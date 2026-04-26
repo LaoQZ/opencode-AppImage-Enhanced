@@ -27,8 +27,8 @@ if ! wget --retry-connrefused --tries=30 "$link" -O /tmp/temp.deb 2>/tmp/downloa
 	exit 1
 fi
 ar xvf /tmp/temp.deb
-tar -xvf ./data.tar
-rm -f ./*.tar /tmp/temp.deb
+tar -xvf ./data.tar.gz
+rm -f ./*.tar.gz /tmp/temp.deb
 
 mkdir -p ./AppDir/bin
 cp -rv ./usr/bin/* ./AppDir/bin
