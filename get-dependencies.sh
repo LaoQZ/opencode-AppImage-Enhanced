@@ -21,18 +21,17 @@ case "$ARCH" in
 	x86_64)  farch=amd64;;
 	aarch64) farch=arm64;;
 esac
-link=https://github.com/anomalyco/opencode/releases/latest/download/opencode-desktop-linux-$farch.deb
-if ! wget --retry-connrefused --tries=30 "$link" -O /tmp/temp.deb 2>/tmp/download.log; then
+link=https://github.com/anomalyco/opencode/releases/latest/download/opencode-linux-$farch.tar.gz
+if ! wget --retry-connrefused --tries=30 "$link" -O /tmp/temp.tar.gz 2>/tmp/download.log; then
 	cat /tmp/download.log
 	exit 1
 fi
-ar xvf /tmp/temp.deb
-tar -xvf ./data.tar.gz
-rm -f ./*.tar.gz /tmp/temp.deb
-
 mkdir -p ./AppDir/bin
-cp -rv ./usr/bin/opencode-cli ./AppDir/bin
-cp -v ./usr/share/applications/* ./AppDir
-cp -v ./usr/share/icons/hicolor/128x128/apps/* ./AppDir
+tar -xvf /tmp/tmp.tar.gz  -C ./AppDir/bin/
+mv ./AppDir/bin/opencode ./AppDir/bin/opencode-cli
+rm -f /tmp/tmp.tar.gz
+
+cp -v ./opencode-cli.desktop ./AppDir
+cp -v ./opencode-cli.png ./AppDir
 
 awk -F'/' '/Location:/{print $(NF-1); exit}' /tmp/download.log > ~/version
