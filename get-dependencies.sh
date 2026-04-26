@@ -34,4 +34,8 @@ rm -f /tmp/tmp.tar.gz
 cp -v ./opencode-cli.desktop ./AppDir
 cp -v ./opencode-cli.png ./AppDir
 
+echo "---------------------------------------------------------------"
+ls -lart ./AppDir/bin/
+ls -lart ./AppDir
+
 awk -F'/' '/Location:/{print $(NF-1); exit}' /tmp/download.log > ~/version
