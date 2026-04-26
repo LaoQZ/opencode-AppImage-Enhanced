@@ -12,6 +12,8 @@ export DEPLOY_OPENGL=1
 # 1. 准备必要的目录
 mkdir -p ./AppDir/bin
 mkdir -p ./AppDir/usr/lib
+cp -v ./opencode-cli.desktop ./AppDir
+cp -v ./opencode-cli.png ./AppDir
 
 
 
@@ -37,8 +39,7 @@ quick-sharun \
 tar -xvf /tmp/tmp.tar.gz  -C ./AppDir/bin/
 mv ./AppDir/bin/opencode ./AppDir/bin/opencode-cli
 chmod +x ./AppDir/bin/opencode-cli
-cp -v ./opencode-cli.desktop ./AppDir
-cp -v ./opencode-cli.png ./AppDir
+
 
 # ==========================================
 # 4. 接管启动器：绕过系统 glibc 安全启动
