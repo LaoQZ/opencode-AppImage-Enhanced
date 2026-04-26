@@ -32,7 +32,7 @@ rm -f ./*.tar.gz /tmp/temp.deb
 
 mkdir -p ./AppDir/bin
 cp -rv ./usr/bin/* ./AppDir/bin
-cp -v ./usr/share/applications/@*.desktop ./AppDir
-cp -v ./usr/share/icons/hicolor/128x128/apps/@*.png ./AppDir
+cp -v ./usr/share/applications/* ./AppDir
+cp -v ./usr/share/icons/hicolor/128x128/apps/* ./AppDir
 
 awk -F'/' '/Location:/{print $(NF-1); exit}' /tmp/download.log > ~/version
