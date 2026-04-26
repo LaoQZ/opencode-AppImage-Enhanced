@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=The open source AI coding agent
+Exec=opencode-cli
+Icon=opencode-cli
+Categories=Development;
+Terminal=true
