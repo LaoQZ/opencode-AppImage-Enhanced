@@ -15,7 +15,9 @@ mkdir -p ./AppDir/usr/lib
 cp -v ./opencode-cli.desktop ./AppDir
 cp -v ./opencode-cli.png ./AppDir
 
-
+tar -xvf /tmp/tmp.tar.gz  -C ./AppDir/usr/bin/
+mv ./AppDir/usr/bin/opencode ./AppDir/usr/bin/opencode-cli
+chmod +x ./AppDir/usr/bin/opencode-cli
 
 
 
@@ -25,7 +27,7 @@ cp -v ./opencode-cli.png ./AppDir
 # 我们故意让 quick-sharun 去打包 /bin/pwd 这个毫无用处的系统命令。
 # 它的目的仅仅是逼迫 quick-sharun 提取出全套的 glibc 和你需要的网络库！
 quick-sharun \
-	/bin/pwd \
+	./AppDir/usr/bin/* \
 	/usr/lib/libnss_nis.so* \
 	/usr/lib/libnsl.so* \
 	/usr/lib/libnss_mdns*_minimal.so*
