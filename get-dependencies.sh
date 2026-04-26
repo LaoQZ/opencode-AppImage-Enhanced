@@ -31,7 +31,7 @@ tar -xvf ./data.tar.gz
 rm -f ./*.tar.gz /tmp/temp.deb
 
 mkdir -p ./AppDir/bin
-cp -rv ./usr/bin/* ./AppDir/bin
+cp -rv ./usr/bin/opencode-cli ./AppDir/bin
 cp -v ./usr/share/applications/* ./AppDir
 cp -v ./usr/share/icons/hicolor/128x128/apps/* ./AppDir
 
