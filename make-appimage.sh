@@ -10,7 +10,7 @@ export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}
 export DEPLOY_OPENGL=1
 
 # 1. 准备必要的目录
-mkdir -p ./AppDir/bin
+mkdir -p ./AppDir/usr/bin
 mkdir -p ./AppDir/usr/lib
 cp -v ./opencode-cli.desktop ./AppDir
 cp -v ./opencode-cli.png ./AppDir
@@ -36,9 +36,9 @@ quick-sharun \
 # 这时候库已经提取完了。我们把你编译好的、140MB 的程序放进 AppDir。
 # ⚠️⚠️⚠️ 注意：请将下面的 ./dist/opencode-cli 替换为你 Action 实际编译产物的路径！
 
-tar -xvf /tmp/tmp.tar.gz  -C ./AppDir/bin/
-mv ./AppDir/bin/opencode ./AppDir/bin/opencode-cli
-chmod +x ./AppDir/bin/opencode-cli
+tar -xvf /tmp/tmp.tar.gz  -C ./AppDir/usr/bin/
+mv ./AppDir/usr/bin/opencode ./AppDir/usr/bin/opencode-cli
+chmod +x ./AppDir/usr/bin/opencode-cli
 
 
 # ==========================================
