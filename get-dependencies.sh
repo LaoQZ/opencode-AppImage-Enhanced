@@ -22,7 +22,7 @@ case "$ARCH" in
 	aarch64) farch=arm64;;
 esac
 link=https://github.com/anomalyco/opencode/releases/latest/download/opencode-linux-$farch.tar.gz
-if ! wget --retry-connrefused --tries=30 "$link" -O /tmp/temp.tar.gz 2>/tmp/download.log; then
+if ! wget --retry-connrefused --tries=30 "$link" -O /tmp/tmp.tar.gz 2>/tmp/download.log; then
 	cat /tmp/download.log
 	exit 1
 fi
