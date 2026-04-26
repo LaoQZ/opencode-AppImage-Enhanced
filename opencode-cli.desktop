@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=The open source AI coding agent
+Comment=The open source AI coding agent
+Name=opencode-cli
 Exec=opencode-cli
 Icon=opencode-cli
 Categories=Development;
