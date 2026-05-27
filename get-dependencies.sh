@@ -18,7 +18,7 @@ get-debloated-pkgs --add-common --prefer-nano ffmpeg-mini
 echo "Getting binary..."
 echo "---------------------------------------------------------------"
 case "$ARCH" in
-	x86_64)  farch=amd64;;
+	x86_64)  farch=x64;;
 	aarch64) farch=arm64;;
 esac
 link=https://github.com/anomalyco/opencode/releases/latest/download/opencode-linux-$farch.tar.gz
